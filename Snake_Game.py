@@ -16,7 +16,7 @@ BACKGROUND_COLOR = "#000000"
 
 class Snake:
     def __init__(self):
-        self.positions = [] # Coordinate of each part
+        self.positions = [] # Coordinates of each part
         self.cells = [] # List of occupied cells
 
     def create_snake(self):
@@ -32,7 +32,7 @@ class Snake:
 
 class Food:
     def __init__(self):
-        self.position = [0, 0]
+        self.position = [0, 0] # Position of the food
 
     def create_food(self):
         while len(snake.positions) < MAX_CELLS:
@@ -125,7 +125,7 @@ def game_win():
     canvas.create_text(canvas.winfo_width() / 2, canvas.winfo_height() / 2 + 40, 
                        font=('Arial', 18), text="[Space to Play Again]", fill="green", tag="menu")
 
-def reset():
+def reset_game():
     global playing
     if playing:
         return
@@ -184,7 +184,7 @@ window.bind('<Up>', lambda event: change_direction('up'))
 window.bind('<Down>', lambda event: change_direction('down'))
 window.bind('<Left>', lambda event: change_direction('left'))
 window.bind('<Right>', lambda event: change_direction('right'))
-window.bind('<space>', lambda event: reset())
+window.bind('<space>', lambda event: reset_game())
 
 canvas.delete(ALL)
 start_screen()
