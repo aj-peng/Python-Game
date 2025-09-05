@@ -18,9 +18,11 @@ HEAD_COLOR = "#1167b1"
 FOOD_COLOR = "#FF0000"
 BACKGROUND_COLOR = "#000000"
 
+# Game state
 score = 0
 playing = False
 
+# Class definitions
 class Snake:
     def __init__(self):
         self.cells = []  # List of occupied cells
@@ -189,6 +191,7 @@ window_width = window.winfo_width()
 window_height = window.winfo_height()
 screen_width = window.winfo_screenwidth()
 screen_height = window.winfo_screenheight()
+
 offset_x = (screen_width - window_width) // 2
 offset_y = (screen_height - window_height) // 2
 window.geometry(f"{window_width}x{window_height}+{offset_x}+{offset_y}")
